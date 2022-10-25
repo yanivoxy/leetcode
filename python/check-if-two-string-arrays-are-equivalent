@@ -1,0 +1,17 @@
+class Solution(object):
+    def arrayStringsAreEqual(self, word1, word2):
+        """
+        :type word1: List[str]
+        :type word2: List[str]
+        :rtype: bool
+        """
+        newstring1 = ''
+        newstring2 = ''
+        
+        for string1, string2 in word1, word2:
+            newstring1.join(sorted(string1))
+            newstring2.join(sorted(string2))
+        
+        return newstring1 == newstring2
+        
+        
